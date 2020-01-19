@@ -1,0 +1,13 @@
+<!-- <script>
+alert('Cari Logo Microsoft Office , PowerPoint, di Desktop Mu');
+var aplikasi = prompt('Pilih aplikasi  1.Microsoft Office  2.Microsoft PowerPoint');
+
+if (aplikasi === "1" ) {
+	alert('anda menekan aplikasi Microsoft Office ');
+} else if (aplikasi === "2"){
+	alert('anda menekan aplikasi Microsoft PowerPoint ');
+} else{
+	alert('anda tidak ketik 2 aplikasi pilihan');
+}
+alert('Terima Kasih');
+</script>

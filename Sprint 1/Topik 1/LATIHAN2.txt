@@ -1,0 +1,19 @@
+for ($i=1; $i < 8 ; $i++) { 
+	if ($i == 1) {
+		echo "1.Pastikan Komputer dalam keadaan Hidup <br>";
+	}elseif ($i == 2) {
+		echo "2.Cari Logo Microsoft Office <br>";
+	}elseif ($i == 3) {
+		echo "3.Klik 2* Logo <br>";
+	}elseif ($i == 4) {
+		echo "4.Program sudah Jalan <br>";
+	}elseif ($i == 5) {
+		echo "5.Ketik sesuka hati anda <br>";
+	}elseif ($i == 6) {
+		echo "6.jika ingin print Pencet Tombol CTRL+P <br>";
+	}elseif ($i == 7) {
+		echo "7.Terus klik Print <br>";
+	}else{
+		echo"SHUTDOWN";
+	}
+}

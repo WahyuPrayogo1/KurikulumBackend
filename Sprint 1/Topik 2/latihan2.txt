@@ -1,0 +1,12 @@
+// var_dump(true && false);
+// // yang keluar tipe data Boolean karena ada true dan false, harusya true tetapi ada && jadi pasti false
+
+
+// var_dump(true || false);
+// yang output True karena ada atau jadi salah satu yang bener
+
+// var_dump(false || false);
+// yang keluar yang false di dalam var_dump juga false semua
+
+// var_dump(!false);
+// tidak false yang pasti output ya keluar

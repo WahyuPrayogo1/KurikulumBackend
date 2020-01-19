@@ -1,0 +1,33 @@
+<?php
+// // $e = "2";
+// // $d = "2";
+// // var_dump($e + $d);
+// // // kan 3 + 5 jadi = 5
+// // // kenapa jadi integer mungkin ada angka, 
+// // // saya coba string dan string , malah muncul integer,
+// // // ya jadi walaupun string tetapi isinya integer maka yang di tampilkan isinya ya itu integer
+
+// $e = '2';
+// $f = 2;
+// var_dump($e == $f);
+// // apakah variabel E sama dengan variabel F , 
+// // tentu sama soalnya isi dalam variabel sama 2 dan 2 jadi sama
+// // yang masih bingung kok bisa string dan integer jadi satu 
+// // ya mungkin vardump melihat isinya 
+
+// $e = '2';
+// $f = 2;
+// var_dump($e === $f);
+// // sama aja kok cuman lebih bagus sama dengannya ada 3 
+
+// $g = null;
+// var_dump($g);
+// // kenapa NULL yang di dalam varibelnya juga Null ya pasti null
+
+// $g = null;
+// var_dump((bool)$g);
+//kenapa false karna variabelnya kosong coba ganti ke angka pasti truee
+
+// $g = null;
+// var_dump((int)$g);
+//null tuh sama dengan 0, tapi lebih baik angka sih jangan null
