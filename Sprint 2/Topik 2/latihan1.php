@@ -1,14 +1,8 @@
 <?php
-
-use PhpParser\Node\Stmt\Echo_;
-
 class Tugas
 {   
     public static function Persegipanjang($persegi,$persegi1)
     {
-
-
-
         echo "Luas Persegi :".$persegi*$persegi1."\n";
 
         $jumlah = 2*($persegi+$persegi1);
@@ -44,9 +38,7 @@ class Tugas
 }
 echo "Menghitung Persegi Panjang \n";
 echo "Panjang :";
-$persegi = (int) fgets(STDIN);        $t = 10;
-$c = 10;
-$d = 10;
+$persegi = (int) fgets(STDIN);   
 echo "Lebar :";
 $persegi1 = (int) fgets(STDIN);
 // Memanggil Method Static

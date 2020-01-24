@@ -1,7 +1,7 @@
 <?php
 
 
-class Tugas
+class Tugas extends Exception
 {   
     public static function Persegipanjang($persegi,$persegi1)
     {
@@ -10,6 +10,7 @@ class Tugas
         $jumlah = 2*($persegi+$persegi1);
         $angka = 100;
         $hasil = $jumlah - $angka;
+
         if ($hasil < 0) {
             throw new Exception("Hasil Keliling Persegi Tidak Boleh Kurang dari 0 \n" ."Eh Hasilnya malah :".$hasil ."\n");
         }

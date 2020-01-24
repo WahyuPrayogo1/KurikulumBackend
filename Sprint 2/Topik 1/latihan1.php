@@ -55,12 +55,12 @@ public function Pinjam($hari)
         $loncat = $this->Kembalikan($jumlah,$myBook,$value);
     }
 
-public function Kembalikan($jumlah,$myBook,$value)
-{
-    $jumlah1 = $value + $jumlah. "\n";
-    print_r("Total Buku : "."$myBook"." ada ".$jumlah1);
+    public function Kembalikan($jumlah,$myBook,$value)
+    {
+        $jumlah1 = $value + $jumlah. "\n";
+        print_r("Total Buku : "."$myBook"." ada ".$jumlah1);
     
-}
+    }
     
 }
 
