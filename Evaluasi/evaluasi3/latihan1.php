@@ -9,7 +9,7 @@ class Register
 	{
 
 		print_r($bisa1[0]);
-		print_r($bisa1[1]);
+
 	}
 
 	 static function namaSantri($bisa)
