@@ -1,0 +1,8 @@
+1NF
+Suatu tabel dikatakan 1NF jika dan hanya jika setiap setiap atribut dari data tersebut hanya memiliki nilai tunggal dalam satu baris.
+
+2NF
+Syarat 2NF adalah tidak diperkenankan adanya partial “functional dependency” kepada primary key dalam sebuah tabel.
+
+3NF
+Pada 3NF tidak diperkenankan adanya partial “transitive dependency” dalam sebuah tabel.
