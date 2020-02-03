@@ -12,6 +12,14 @@ class NilaiS
                 echo "Connection Success ! \n";
             }
         }
+    public function Tampil()
+    {
+        $tampil = "SELECT * FROM Nilai";
+        $tampil=$this->dbh->prepare($tampil);
+        $tampil->execute();
+        $result = $tampil->fetchAll(pdo::FETCH_ASSOC);
+        print_r($result);
+    }
 
     public function tambah($nik,$nama,$kelas,$nilai)
     {
@@ -24,12 +32,37 @@ class NilaiS
         $insert->BindParam(':nilai',$nilai);
         $insert->execute();
         $result = $insert->fetchAll(pdo::FETCH_ASSOC);
-        print_r($insert);
-    }
 
+        $loncat = $this->Tampil();
+    }
+    public function input()
+    {
+        $insert = "SELECT COUNT(id) FROM Nilai ";
+        $insert=$this->dbh->prepare($insert);
+        $insert->execute();
+        $result = $insert->fetchAll(pdo::FETCH_ASSOC);
+        print_r($result);
+        
+    }
     public function rata_rata()
     {
-        $insert = "SELECT AVG(Nilai)From Nilai";
+        $insert = "SELECT AVG(Nilai_Mtk)From Nilai";
+        $insert=$this->dbh->prepare($insert);
+        $insert->execute();
+        $result = $insert->fetchAll(pdo::FETCH_ASSOC);
+        print_r($result);
+    }
+    public function nilai_Tinggi()
+    {
+        $insert = "SELECT nama,Nilai_Mtk From Nilai Where Nilai_Mtk >= 80";
+        $insert=$this->dbh->prepare($insert);
+        $insert->execute();
+        $result = $insert->fetchAll(pdo::FETCH_ASSOC);
+        print_r($result);
+    }
+    public function nilai_Rendah()
+    {
+        $insert = "SELECT nama From Nilai Where Nilai_Mtk < 65";
         $insert=$this->dbh->prepare($insert);
         $insert->execute();
         $result = $insert->fetchAll(pdo::FETCH_ASSOC);
@@ -41,9 +74,10 @@ $masuk = new NilaiS();
 echo "SELAMAT DATANG \n";
 echo "|==========================| \n";
 echo " 1.Tambah Data  \n";
-echo " 2.Hitung Rata-Rata Nilai  \n";
-echo " 3.Nilai Terbaik  \n";
-echo " 4.Nilai Remedial \n";
+echo " 2.Hitung Semua Data  \n";
+echo " 3.Hitung Rata-Rata Nilai  \n";
+echo " 4.Nilai Terbaik  \n";
+echo " 5.Nilai Remedial \n";
 echo "|==========================| \n";
 
 echo "Pilih SLurr : ";
@@ -69,9 +103,18 @@ for ($i=0; $i < $tambah ; $i++) {
 
     $masuk->tambah($nik,$nama,$kelas,$nilai);
 }
-}elseif($pilih == 2){
+}elseif($pilih == 3){
 
     $masuk->rata_rata();
+}elseif($pilih == 2){
+
+    $masuk->input();
+}elseif($pilih == 4){
+
+    $masuk->nilai_Tinggi();
+}elseif($pilih == 5){
+
+    $masuk->nilai_Rendah();
 }
 
 
