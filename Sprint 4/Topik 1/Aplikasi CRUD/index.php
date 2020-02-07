@@ -2,9 +2,7 @@
 
 <?php
     include 'koneksi.php';
-    $query = $db->prepare("SELECT * FROM barang");
-    $query->execute();
-    $data = $query->fetchAll();
+
 ?>
 
 <!doctype html>

@@ -1,6 +1,7 @@
   <!-- Page -->
   <?php	
     include '../../koneksi.php';
+    
     $query = $db->prepare("SELECT * FROM barang");
     $query->execute();
     $data = $query->fetchAll();
@@ -65,7 +66,7 @@
             </table>
           </div>
         </div>
-        <!-- End Panel Basic -->
+        <!-- End Panel Basic --> 
       </div>
     </div>
     <!-- End Page -->

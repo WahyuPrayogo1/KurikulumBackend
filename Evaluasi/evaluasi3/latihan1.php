@@ -8,7 +8,7 @@ class Register
 	function __construct($bisa1)
 	{
 
-		print_r($bisa1[0]);
+		print_r($bisa1);
 
 	}
 
@@ -32,7 +32,7 @@ for ($i=0; $i < $masuk ; $i++) {
 	echo "Masukan Nama alamat : \n";
 	$alamat = (trim(fgets(STDIN)));
 		
-	$arr1[][] = $nama;
+	$arr1[]= [$nama,$alamat];
 
 	
 	$run = $arr1;
