@@ -36,11 +36,8 @@
         $jumlah = htmlentities($_POST['jumlah']);
         
         $query = $db->prepare("INSERT INTO barang(nama_barang,harga,jumlah)
-        VALUES (:nama_barang,:harga,:jumlah)");
-
-  		  $query->bindParam(":nama_barang", $nama_barang);
-        $query->bindParam(":harga", $harga);
-        $query->bindParam(":jumlah", $jumlah);
+        VALUES ('$nama_barang','$harga','$jumlah')");
+    
         $query->execute();
         if ($query == true) {
         	?>

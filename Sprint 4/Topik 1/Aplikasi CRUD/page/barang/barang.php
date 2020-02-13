@@ -1,11 +1,9 @@
-  <!-- Page -->
-  <?php	
-    include '../../koneksi.php';
-    
-    $query = $db->prepare("SELECT * FROM barang");
+ <?php 
+include '../../koneksi.php';
+$query = $db->prepare("SELECT * FROM barang");
     $query->execute();
     $data = $query->fetchAll();
-  ?>
+ ?>
     <div class="page">
       <div class="page-header">
         <h1 class="page-title">Barang</h1>
