@@ -1,0 +1,16 @@
+{
+    "name": "asupan/composer",
+    "authors": [
+        {
+            "name": "WahyuPrayogo1",
+            "email": "wahyudev3211@gmail.com"
+        }
+    ],
+    "require": {},
+
+    "autoload": {
+        "psr-4": {
+            "KodingWaelah\\":"src/"
+        }
+    }
+}
