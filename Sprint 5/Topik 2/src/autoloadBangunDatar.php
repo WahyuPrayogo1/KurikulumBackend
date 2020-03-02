@@ -3,6 +3,18 @@ namespace KodingWaelah;
 
 class autoloadBangunDatar
 {
+    function __construct()
+    {
+        $this->db = new \PDO('mysql:host=localhost;dbname=pesantren', "root", "");
+    }
+    public function read(){
+        $tampil = $this->db->prepare("SELECT * FROM santri");
+        $tampil->execute();
+        $data = $tampil->fetchAll();
+        return $data;
+        
+               
+    }
     public function kpersegi($luaspersegi,$kelilingpersegi){
         $hasil = $luaspersegi * $luaspersegi;
         echo "Hasil Luas Persegi: ",$hasil;
@@ -33,9 +45,7 @@ class autoloadBangunDatar
         echo "Hasil dari Keliling Lingkaran : ", $hitung1;
     }
 
-    public function read(){
-        echo"haha";
-    }
+    
 }
 
 ?>

@@ -1,9 +1,3 @@
-<?php
-require_once __DIR__. '/vendor/autoload.php';
-
-use KodingWaelah\autoloadBangunDatar;
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,8 +56,14 @@ use KodingWaelah\autoloadBangunDatar;
 </body>
 </html>
 
-<?php
 
+<?php
+require_once __DIR__. '/vendor/autoload.php';
+
+use KodingWaelah\autoloadBangunDatar;
+$tampil = new autoloadBangunDatar();
+$data = $tampil->read();
+var_dump($data);
 //BATAS
 
 if (isset($_POST['submit'])) {
@@ -100,6 +100,7 @@ if (isset($_POST['submit3'])) {
     $tampil->segitiga($sisi);
 
 }
+
 
 ?>
 
